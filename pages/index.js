@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { gql, useQuery } from "@apollo/client";
 import { useEffect, useRef, useState } from "react";
 
@@ -19,7 +20,6 @@ const query = gql`
 
 export default function Home() {
   const { loading, data } = useQuery(query);
-  !loading && console.log(data);
 
   const [fileType, setFileType] = useState(null);
 
@@ -51,7 +51,7 @@ const useKeypress = (e) => {
   return (
     <div>
       <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-        <img onClick={() => window.location.reload()} src="/logo.png" width="50px" height="50px" layout="fixed" />
+        <Image onClick={() => window.location.reload()} src="/logo.png" width="50px" height="50px" layout="fixed" />
         <h1>Randomizer</h1>
       </div>
       <h3>dev by <span style={{textDecoration: 'underline'}}><a href="https://rasha.world">rasha</a></span> using <span style={{textDecoration: 'underline'}}><a href="https://zora.engineering/subgraph">zora subgraph</a></span></h3>
