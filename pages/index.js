@@ -48,10 +48,10 @@ export default function Home() {
   return (
     <div>
         <Header />
-      <br />
+        {trying && <>  <br />
       <label>Created By <code style={{}}>{data.media.creator.id}</code></label>
       <br />
-      <label>Owned by <code style={{}}>{data.media.owner.id}</code></label> <br />
+      <label>Owned by <code style={{}}>{data.media.owner.id}</code></label> <br /></>}
       
 {!trying && "Loading"}
 <br />
