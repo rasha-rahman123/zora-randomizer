@@ -8,8 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.9",
+    "axios": "^0.21.1",
+    "file-type": "^16.2.0",
+    "got": "^11.8.1",
+    "graphql": "^15.5.0",
+    "http": "0.0.1-security",
+    "iframe-resizer-react": "^1.1.0",
     "next": "10.0.6",
+    "node-sass": "^5.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-favicon": "0.0.18"
   }
 }
