@@ -5,16 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "@apollo/client": "^3.3.9",
+    "@testing-library/react": "^11.2.5",
+    "apollo-mocked-provider": "^5.0.0",
     "axios": "^0.21.1",
     "file-type": "^16.2.0",
     "got": "^11.8.1",
     "graphql": "^15.5.0",
     "http": "0.0.1-security",
     "iframe-resizer-react": "^1.1.0",
+    "jest": "^26.6.3",
     "next": "10.0.6",
     "node-sass": "^5.0.0",
     "react": "17.0.1",
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
+    "@testing-library/jest-dom": "^5.11.9",
     "babel-jest": "^26.6.3"
   }
 }
