@@ -49,9 +49,9 @@ export default function Home() {
     <div>
         <Header />
       <br />
-      <label>Created By: {data.media.creator.id}</label>
+      <label>Created By <code style={{}}>{data.media.creator.id}</code></label>
       <br />
-      <label>Owned by: {data.media.owner.id}</label> <br />
+      <label>Owned by <code style={{}}>{data.media.owner.id}</code></label> <br />
       
 {!trying && "Loading"}
 <br />
@@ -71,8 +71,8 @@ export default function Home() {
           onLoad={() => setTrying(true)}
           src={data.media.contentURI}
           style={{ visibility: !trying && "hidden" }}
-          width="500px"
-          height="500px"
+          width={window.innerWidth < 700 ? '250px' : '500px'}
+          height={window.innerWidth < 700 ? '250px' : '500px'}
           layout="intrinsic"
         />
       )}
@@ -84,8 +84,8 @@ export default function Home() {
          onCanPlay={() => setTrying(true)}
           src={data.media.contentURI}
           type="media"
-          width="500px"
-          height="500px"
+          width={window.innerWidth < 700 ? '250px' : '500px'}
+          height={window.innerWidth < 700 ? '250px' : '500px'}
         />
       )}
       {fileType === "audio" && (

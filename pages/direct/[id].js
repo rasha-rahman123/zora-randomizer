@@ -55,11 +55,11 @@ export default function DirectID() {
 
   return (
     <div>
-     <Header />
+       <Header />
       <br />
-      <label>Created By: {data.media.creator.id}</label>
+      <label>Created By <code style={{}}>{data.media.creator.id}</code></label>
       <br />
-      <label>Owned by: {data.media.owner.id}</label> <br />
+      <label>Owned by <code style={{}}>{data.media.owner.id}</code></label> <br />
      
  
 {!trying && "Loading"}
@@ -80,8 +80,8 @@ export default function DirectID() {
           onLoad={() => setTrying(true)}
           src={data.media.contentURI}
           style={{ visibility: !trying && "hidden" }}
-          width="500px"
-          height="500px"
+          width={window.innerWidth < 700 ? '250px' : '500px'}
+          height={window.innerWidth < 700 ? '250px' : '500px'}
           layout="intrinsic"
         />
       )}
@@ -93,8 +93,8 @@ export default function DirectID() {
          onCanPlay={() => setTrying(true)}
           src={data.media.contentURI}
           type="media"
-          width="500px"
-          height="500px"
+          width={window.innerWidth < 700 ? '250px' : '500px'}
+          height={window.innerWidth < 700 ? '250px' : '500px'}
         />
       )}
       {fileType === "audio" && (
